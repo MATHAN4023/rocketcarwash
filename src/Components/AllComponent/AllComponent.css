@@ -1,0 +1,24 @@
+.example{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+}
+/* AllComponent.css */
+.horizontal-scroll-container {
+    display: block; /* Default behavior to show both components */
+  }
+  
+  /* Hide HorizontalScrollMob on larger screens */
+  @media (min-width: 769px) {
+    .horizontal-scroll-container .horizontal-scroll-mob {
+      display: none; /* Hide HorizontalScrollMob on larger screens */
+    }
+  }
+  
+  /* Hide HorizontalScroll on mobile screens */
+  @media (max-width: 768px) {
+    .horizontal-scroll-container .horizontal-scroll {
+      display: none; /* Hide HorizontalScroll on mobile screens */
+    }
+  }
+  

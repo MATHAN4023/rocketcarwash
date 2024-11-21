@@ -1,0 +1,115 @@
+/* Container styles */
+.carwash-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    gap: 2rem;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
+}
+
+/* For larger screens (tablets, desktops, etc.) */
+@media (min-width: 768px) {
+    .carwash-card {
+        flex-direction: row; /* Place the text and image side by side */
+        padding: 4rem; /* Increase padding for more space */
+        gap: 3rem; /* More gap between text and image */
+    }
+}
+
+/* Text content styles */
+.carwash-text {
+    flex: 1;
+    text-align: start; /* Center text for small screens */
+}
+
+/* Title styles */
+.carwash-title {
+    color: #ff4500;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Heading styles */
+.carwash-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Mobile adjustments for the heading */
+@media (min-width: 768px) {
+    .carwash-heading {
+        font-size: 2.5rem;
+    }
+   
+}
+
+/* Description styles */
+.carwash-description {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #d3d3d3;
+}
+
+/* Mobile adjustments for description */
+@media (min-width: 768px) {
+    .carwash-description {
+        font-size: 1.5rem;
+    }
+}
+
+/* Image content styles */
+.carwash-image-container {
+    flex-shrink: 0;
+    width: 100%;
+    height: 40vh; /* Set to 40vh on mobile devices */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .carwash-image-container {
+        width: 40%; /* The image takes up 40% of the container on larger screens */
+        max-height: 30vh; /* Limit the image's max height */
+    }
+}
+
+/* Image styles */
+.carwash-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* Text alignment adjustments for mobile */
+@media (max-width: 767px) {
+    .carwash-text {
+        /* padding: 1rem;  */
+    }
+
+    .carwash-title {
+        font-size: 0.875rem; /* Reduce title font size on mobile */
+    }
+
+    .carwash-heading {
+        font-size: 1.25rem; /* Reduce heading font size on mobile */
+    }
+
+    .carwash-description {
+        font-size: 0.875rem; /* Reduce description font size on mobile */
+    }
+    .carwash-text{
+        width: 90vw;
+    }
+}

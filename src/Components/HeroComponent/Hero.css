@@ -1,0 +1,153 @@
+:root {
+  --text-color-white: #ffffff;
+  --bg-dark-black: #000000;
+  --button-green: #c60000;
+  --button-hover-green: #f00c0c;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  min-height: 110vh;
+  background-color: var(--bg-dark-black);
+  /* background-image: url('../../assets/picture/Backmain.png'); */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../../assets/picture/Backmain.png') no-repeat center center/cover; */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+
+  color: var(--text-color-white);
+  /* padding: 2rem; */
+}
+
+.hero {
+  padding: 5rem;
+  background-color: var(--bg-dark-black);
+  color: var(--text-color-white);
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Text-potion {
+ margin: 4rem;
+ display: flex;
+ flex-direction: center;
+ justify-content: center;
+}
+
+.sontspac{
+  line-height: 2;
+}
+
+.text-section {
+  text-align: start;
+  width: 50vw;
+  /* margin-bottom: 2rem; */
+}
+
+.text-section h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.discover-button {
+  background-color: var(--button-green);
+  color: var(--text-color-white);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom-right-radius: 25px;
+}
+
+.discover-button:hover {
+  background-color: var(--button-hover-green);
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45vw;
+  /* gap: 1rem; */
+}
+
+.certificate img {
+  width: 40vw;
+  /* border: 2px solid var(--text-color-white); */
+  border-radius: 8px;
+}
+
+.btn-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainvideo{
+  /* margin-right: 10rem; */
+}
+
+@media screen and (max-width: 768px) {
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+  .Text-potion {
+    margin: 0rem;
+   }
+
+  .discover-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .image-section {
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .text-section p {
+    margin-bottom: 4rem;
+  }
+  .text-section h1 {
+    margin-bottom: 3rem;
+  }
+
+  .certificate img {
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .people-images img {
+    max-width: 80px;
+  }
+  .text-section {
+    width: 95vw;
+    align-items: center;
+    text-align: center;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

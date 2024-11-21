@@ -1,0 +1,56 @@
+/* General Styles for Horizontal Scroll */
+.hcontent {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure no wrapping for large screens */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-color: black;
+}
+
+.card-item {
+  flex-shrink: 0; /* Prevent shrinking of cards */
+  width: 100vw; /* Each card takes up full screen width */
+  height: 100vh; /* Each card takes up full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black; /* Black background for the cards */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hcontent {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .card-item {
+    width: 100%; /* Full width for each card in column layout */
+    height: auto; /* Let cards adapt their height */
+    margin-bottom: 20px; /* Add space between cards */
+    padding: 10px;
+  }
+
+  /* Fix the text/image overlap */
+  .card-item .card-content {
+    text-align: center;
+    margin-top: 10px; /* Add spacing between the text and the image */
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hcontent {
+    flex-direction: row; /* Keep horizontal scroll for larger screens */
+    width: 500vw; /* The total width should be the number of cards times 100vw */
+  }
+
+  .card-item {
+    width: 100vw; /* Full width of screen for horizontal scroll */
+    height: 100vh; /* Full height of screen */
+    margin-right: 20px; /* Optional margin between cards */
+  }
+}
+
